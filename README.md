@@ -1,1 +1,3 @@
-# This folder contains the exercices and projects of the course on Data Science followed on Coursera.
+# Folder content
+
+This folder contains the exercices and projects of the course on Data Science followed on Coursera. 
