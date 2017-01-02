@@ -12,12 +12,12 @@ Three kinds of files are posted in  this folder :
     3. <span style="color:blue">***12_swirl_Binary_Outcomes.pdf***</span> : study of the prediction of binary outcomes (e.g. wins/losses) using logistic regression
     4. <span style="color:blue">***13_swirl_Count_Outcomes.pdf***</span> : study of the prediction of count outcomes (e.g. nb of visits on a Web site) using Poisson regression
     
-  * ***Quiz files***
+ * ***Quiz files***
  The files are my personal version of the quiz for week 4. This quiz is rendered under the followinf formats :
- 1. ***.md format*** : this format is markdown format
- 2. ***.pdf format*** : this file is created from .Rmd file using TexMex package, which provides ${\LaTeX}$ outlook.
+    1. ***.md format*** : this format is markdown format
+    2. ***.pdf format*** : this file is created from .Rmd file using TexMex package, which provides ${\LaTeX}$ outlook.
  
-   * ***Final project***
+ * ***Final project***
  
  The final project is a validation project which asks to study a concrete case and analyze it. The student is free to use the analyze tools and methods he/she wants, under the condition that the project instructions are followed. These instructions are defined in the file called <span style="color:blue">***Regression Model Course Project.docx***</span>. 
  
