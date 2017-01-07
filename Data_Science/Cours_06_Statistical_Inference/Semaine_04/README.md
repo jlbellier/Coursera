@@ -1,7 +1,7 @@
 # Content of this folder
-This folder is dedicated to the Course ***Regression models***, which is the course 6 of the Data Science Specialization MOOC.
+This folder is dedicated to the Course ***Statistical Inference***, which is the course 6 of the Data Science Specialization MOOC.
 
-This folder contains the exercices and projects about the week 4, which concerns ***Logistic Regression*** and ***Poisson Regression***.
+This folder contains the exercices and projects about the week 4, which concerns ***Power, Bootstrapping, & Permutation Tests***.
 
 Three kinds of files are posted in  this folder :
 
