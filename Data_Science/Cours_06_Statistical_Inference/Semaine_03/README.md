@@ -1,7 +1,7 @@
 # Content of this folder
-This folder is dedicated to the Course ***Regression models***, which is the course 6 of the Data Science Specialization MOOC.
+This folder is dedicated to the Course ***Statistical Inference***, which is the course 6 of the Data Science Specialization MOOC.
 
-This folder contains the exercices and projects about the week 4, which concerns ***Logistic Regression*** and ***Poisson Regression***.
+This folder contains the exercices and projects about the week 3, which concerns ***Testing, P-values***.
 
 Three kinds of files are posted in  this folder :
 
@@ -16,5 +16,4 @@ Three kinds of files are posted in  this folder :
  The files are my personal version of the quiz for week 3. This quiz is rendered under the followinf formats :
     1. ***.html format*** : this format is markdown format
     2. ***.pdf format*** : this file is created from .Rmd file using TexMex package, which provides ${\LaTeX}$ outlook.
- 
  
