@@ -10,3 +10,5 @@ Three kinds of files are posted in  this folder :
     1. ***.html format*** : this format is markdown format
     2. ***.pdf format*** : this file is created from .Rmd file using MikTex package, which provides ${\LaTeX}$ outlook.
  
+ * ***Ploting practice files***
+ The files are related to plooting practice exercices. The outputs are under .html and .pdf format, and the graphs are also saved in pdf format.
