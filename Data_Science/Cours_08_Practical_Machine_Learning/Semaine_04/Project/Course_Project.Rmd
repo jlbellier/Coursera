@@ -104,7 +104,6 @@ confMatRF$overall[1]
 names(model_RF$finalModel)
 model_RF$finalModel$classes
 plot(model_RF$finalModel,main="Model error of Random forest model by number of trees")
-legend(400,0.08,title="classes",legend=model_RF$finalModel$classes)
 # Compute the variable importance 
 MostImpVars <- varImp(model_RF)
 MostImpVars
