@@ -46,3 +46,6 @@ https://jlbellier.shinyapps.io/Paris_visits/.
 Feel free to change the visit year and to click on the markers to discover views and information on these monuments.
 
 The material of this dahboard can be found in the folder 
+
+https://github.com/jlbellier/Coursera/tree/master/Data_Science/Cours_09_Developing_Data_Products/Semaine_02/Project_Slides
+
