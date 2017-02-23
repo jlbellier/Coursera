@@ -1,0 +1,88 @@
+<style>
+.small-code pre code {
+  font-size: 1em;
+}
+
+.footer {
+    color: black; background: #E8E8E8;
+    position: fixed; top: 90%;
+    text-align:center; width:100%;
+}
+</style>
+
+
+Data Project Presentation
+========================================================
+author: Jean-Luc BELLIER
+date: February 21st 2017
+autosize: true
+
+
+
+![alt text](journees-europeennes-patrimoine.jpg)
+***
+dgsgfq
+
+The subject
+========================================================
+
+The [European Heritage Days](http://www.coe.int/en/web/culture-and-heritage/european-heritage-days) is a cultural annual event, that takes place since 1991. It gives the opportunity for everyone, during one week-end, to discover and visit momuments or part of them that are usually closed to the public. 
+
+
+This event takes place in around 50 countries in Europe and also in extra european countries. It was initiated by French Ministry of Culture in 1984.  
+
+The Data is coming from the French open data. It lists all the events and nomuments that occured in september 2016. 
+
+
+The elements of the project
+========================================================
+The project is made of two elements :
+
+ * an interactive application, made with <span style="font-family:Courier">shiny</span>
+ * the current presentation, built with <span style="font-family:Courier">R Presenter</span>
+ 
+The interactive application can be found at the following address :
+[European Heritage Days 2016](https://jlbellier.shinyapps.io/developing_data_products_project/). 
+
+Data Load and Initial Quality
+========================================================
+class: small-code
+
+In this slide, we will shortly illustrate the quality of the original data set.
+First we load the data file and compute the dimensions:
+
+```{r LoadData}
+library(tidyr)
+library(dplyr)
+Journees_Patr_2016 <- read.csv("Journees_europeennes_du_patrimoine_20160914.csv",encoding="UTF-8", sep=";",header=TRUE,stringsAsFactors = FALSE)
+dim(Journees_Patr_2016)
+```
+
+***
+```{r CheckEmptyColumns}
+nb_obs <- dim(Journees_Patr_2016)[1]
+nb_col <- dim(Journees_Patr_2016)[2]
+
+# remove empty columns
+check_NA <- apply(Journees_Patr_2016,2,function(x) sum(is.na(x)))
+cols_to_remove <- which(check_NA == nb_obs)
+clean_Jour_Pat_2016 <- select(Journees_Patr_2016,-cols_to_remove)
+dim(clean_Jour_Pat_2016)
+```
+
+```{r CheckLatLong}
+clean_Jour_Pat_2016_2 <- clean_Jour_Pat_2016 %>% subset(!is.na(Latitude) & !is.na(Longitude))
+dim(clean_Jour_Pat_2016_2)
+```
+
+
+<div class="footer">
+We can notice that half of the columns (62 columns among 122) are completely empty.
+In addition, we can check the number of rows having both Latitude and Longitude.</div>
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```
