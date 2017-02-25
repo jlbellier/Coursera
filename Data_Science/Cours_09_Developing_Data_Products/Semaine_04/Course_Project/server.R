@@ -33,6 +33,9 @@ shinyServer(function(input, output,session) {
         selectedReg <- input$Region
         selectedDep <- input$Department
 
+        selectedDep <- ifelse(is.null(selectedDep),"All",selectedDep)
+        selectedReg <- ifelse(is.null(selectedReg),"All",selectedReg)
+        #ListeEvents <- clean_Jour_Pat_2016_2
         filterDep = TRUE
         filterReg = TRUE
         if (!is.null(selectedDep) & selectedDep !="All") {
@@ -43,6 +46,9 @@ shinyServer(function(input, output,session) {
             filterReg = (clean_Jour_Pat_2016_2$Region==selectedReg)
         }
 
+        #print("filters")
+        #print(filterDep)
+        #print(filterReg)
         filter(clean_Jour_Pat_2016_2,filterReg & filterDep)
     })
     
@@ -66,7 +72,10 @@ shinyServer(function(input, output,session) {
     })
 
     output$View <- DT::renderDataTable({
-        data_to_load <-if (is.null({ListEvents()})) 
+        checkData <- is.null(ListEvents())
+        #print("checkData")
+        #print(checkData)
+        data_to_load <-if (checkData) 
         {
             clean_Jour_Pat_2016_2[,DisplayedColumns]
         } 
@@ -74,6 +83,8 @@ shinyServer(function(input, output,session) {
         {
             {ListEvents()}[,DisplayedColumns]
         }
+        #print("data_to_load")
+        #print(data_to_load)
         colnames(data_to_load) <- paste0('<span style="color:blue">',c("Location Name","Event name","Town","Department","Region","Event Description","Location Description"),'</span>')
         DT::datatable(data_to_load,escape=FALSE)
         

@@ -20,7 +20,7 @@ clean_Jour_Pat_2016 <- select(Journees_Patr_2016,-cols_to_remove)
 
 # Here we will removed the accents from the column names, to make processing easier. 
 col_names <- names(clean_Jour_Pat_2016)
-print(col_names)
+#print(col_names)
 new_col_names <- gsub("è","e",gsub("é","e",gsub(".","_",gsub("...","_",col_names,fixed=TRUE),fixed=TRUE),fixed=TRUE),fixed=TRUE)
 Encoding(new_col_names) <- "UTF-8"
 
