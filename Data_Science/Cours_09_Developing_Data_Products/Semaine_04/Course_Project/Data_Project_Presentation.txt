@@ -59,14 +59,20 @@ Data Load and Initial Quality
 ========================================================
 class: small-code
 
-```{r LoadData}
+
+```r
 library(tidyr)
 library(dplyr)
 Journees_Patr_2016 <- read.csv("Journees_europeennes_du_patrimoine_20160914.csv",encoding="UTF-8", sep=";",header=TRUE,stringsAsFactors = FALSE)
 dim(Journees_Patr_2016)
 ```
 
-```{r CheckEmptyColumns}
+```
+## [1] 23624   122
+```
+
+
+```r
 nb_obs <- dim(Journees_Patr_2016)[1]
 nb_col <- dim(Journees_Patr_2016)[2]
 
@@ -77,9 +83,18 @@ clean_Jour_Pat_2016 <- select(Journees_Patr_2016,-cols_to_remove)
 dim(clean_Jour_Pat_2016)
 ```
 
-```{r CheckLatLong}
+```
+## [1] 23624    60
+```
+
+
+```r
 clean_Jour_Pat_2016_2 <- clean_Jour_Pat_2016 %>% subset(!is.na(Latitude) & !is.na(Longitude))
 dim(clean_Jour_Pat_2016_2)
+```
+
+```
+## [1] 10591    60
 ```
 
 A few words on the data
