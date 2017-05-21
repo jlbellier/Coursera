@@ -1,4 +1,4 @@
-# This folder contains the steps related to the final Capstone project. This project is dedicated to Natural Language Processing on large text files (tweets, blogs and news). 
+This folder contains the steps related to the final Capstone project. This project is dedicated to Natural Language Processing on large text files (tweets, blogs and news). 
 
 This folder gathers the exercices and projects relative to the Course 10 of Data Science Specialization : ***Data Science Capstone***.
 
